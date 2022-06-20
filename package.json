@@ -1,0 +1,31 @@
+{
+  "name": "stackover",
+  "version": "1.0.0",
+  "description": "mp",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ok"
+  ],
+  "author": "anandjha",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^16.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.3",
+    "mongoose": "^5.13.14",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.16",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
