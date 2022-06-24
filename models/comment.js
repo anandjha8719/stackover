@@ -13,7 +13,13 @@ const commentSchema = new mongoose.Schema({
     post: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Post'
-    }
+    },
+    votes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Vote'
+        }
+    ]
 },{
     timestamps: true
 });

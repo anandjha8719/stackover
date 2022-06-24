@@ -35,3 +35,11 @@
 <script src="/js/home_post_comments.js" ></script>
 <script src="/js/home_posts.js"></script>
 
+<script src="js/toggle_votes.js"></script>
+<script>
+    $('.toggle-vote-button').each(function(){
+        let self = this;
+        let toggleVote = new ToggleVote(self);
+    });
+</script>
+

@@ -11,6 +11,20 @@
             <small>
                 <%= comment.user.name %>
             </small>
+
+
+
+            <small>
+                <% if (locals.user){ %>
+                    <a class="toggle-vote-button" data-votes="<%= comment.votes.length %>" href="/votes/toggle?id=<%=comment._id%>&type=Comment">
+                            <%= comment.votes.length %> Votes
+                    </a>
+                <% }else{ %>
+                    <%= comment.votes.length %> Votes
+                <% } %>
+            </small>
         </p>    
+
+        
 
 </li>

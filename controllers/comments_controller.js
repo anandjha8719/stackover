@@ -2,6 +2,8 @@ const Comment = require('../models/comment');
 const Post = require('../models/post');
 const User = require('../models/user');
 
+const Vote = require('../models/vote');
+
 module.exports.create = async function(req, res){
 
     try{
@@ -52,6 +54,8 @@ module.exports.destroy = async function(req, res){
 
     try{
         let comment = await Comment.findById(req.params.id);
+
+        await Vote.deleteMany({voteable: comment._id, onModel: 'Comment'});
 
         if (comment.user == req.user.id){
 
